@@ -28,6 +28,10 @@ connectDB();
 app.use("/products", productRoutes);
 app.use("/user", userRoutes);
 
+app.get("/", (req, res) =>{
+  res.send("welcome to the api")
+})
+
 //Running server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
